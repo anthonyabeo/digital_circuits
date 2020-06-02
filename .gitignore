@@ -1,5 +1,5 @@
-full_adder/full_adder.cache
-full_adder/full_adder.hw
-full_adder/full_adder.ip_user_files
-full_adder/full_adder.runs
-full_adder/full_adder.sim
+*/*.cache
+*/*.hw
+*/*.ip_user_files
+*/*.runs
+*/*.sim
