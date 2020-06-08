@@ -1,0 +1,24 @@
+package alu_pkg;
+    
+    typedef enum logic [1:0] {
+//        ADDI = 5'b10100,
+//        SLTI = 5'b10011,
+//        SLTIU = 5'b10010,
+//        XORI = 5'b10001,
+//        ORI = 5'b10000,
+//        ANDI = 5'b01111,
+//        SRLI = 5'b01110, 
+//        SRAI = 5'b01101,
+//        _AND = 5'b01100,
+//        _OR = 5'b01011,
+//        SRA = 5'b01010,
+//        SRL = 5'b01001,
+//        _XOR = 5'b01000,
+//        STLU = 5'b00100,
+//        SLT = 5'b00011,
+        SLL = 2'b10,
+        SUB = 2'b01,
+        ADD = 2'b00  
+    } AluOp;
+    
+endpackage
