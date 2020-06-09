@@ -25,6 +25,6 @@ set_property PACKAGE_PIN U5 [get_ports {result[4]}]
 set_property PACKAGE_PIN V5 [get_ports {result[5]}]
 set_property PACKAGE_PIN U7 [get_ports {result[6]}]
 
-set_property PACKAGE_PIN U16 [get_ports {zero}]
+set_property PACKAGE_PIN U16 [get_ports zero]
 
 set_property IOSTANDARD LVCMOS33 [get_ports {a b alu_op result zero}]
