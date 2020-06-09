@@ -28,24 +28,25 @@ module alu(
     output logic         zero
 );
 
-    logic [6:0] temp;
+//    logic [6:0] temp;
     
     always_comb begin
         case(alu_op)
-            ADD: temp = a + b; 
-            SUB: temp = a - b; 
-            SLL: temp = a << b;
-            SLT: temp = (a < b) ? 1 : 0;
-            SLTU: temp = (a < b) ? 1 : 0;
-            XOR: temp = a ^ b;
-            SRL: temp = a >> b;
-            SRA: temp = a >>> b;
-            OR: temp = a | b;
-            AND: temp = a & b;
+            ADD: result = a + b; 
+            SUB: result = a - b; 
+            SLL: result = a << b;
+            SLT: result = (a < b) ? 1 : 0;
+            SLTU: result = (a < b) ? 1 : 0;
+            XOR: result = a ^ b;
+            SRL: result = a >> b;
+            SRA: result = a >>> b;
+            OR: result = a | b;
+            AND: result = a & b;
         endcase
     end
     
-    seven_segment sv(temp, result);
+//    seven_segment sv(temp, result);
+//    assign result = temp;
     assign zero = result == 0 ? 1 : 0;
     
 endmodule
