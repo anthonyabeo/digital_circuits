@@ -30,9 +30,6 @@ module gcd(
     
     logic [7:0] A, B;
     
-//    logic clk_en;
-//    clk_div(clk, rst, clk_en);
-    
     
     typedef enum logic [1:0] { S0, S1, S2, S3} State;
     State curState, nextState;
@@ -53,14 +50,12 @@ module gcd(
                 else nextState = S2;
                 
             S1: begin 
-//                B = B - A;
                 if(A == B) nextState = S3;
                 else if(A < B) nextState = S1;
                 else nextState = S2;
             end
             
             S2: begin
-//                A = A - B;
                 if(A == B) nextState = S3;
                 else if(A < B) nextState = S1;
                 else nextState = S2;
