@@ -37,9 +37,14 @@ module gcd(
     always_ff @ (posedge clk, posedge rst)
         if(rst) begin
             curState = S0;
-            
+            A <= a; B <= b;
         end
-        else curState = nextState;
+        else begin
+            if(A < B) B <= B - A;
+            if(A > B) A <= A - B;
+            
+            curState = nextState;
+        end
  
     
     always_comb begin 
@@ -73,15 +78,5 @@ module gcd(
         if(curState == S3)
             result <= A;
         
-        
-    always_ff @ (posedge clk)
-        if(rst) begin
-            A <= a; B <= b;
-        end
-        else begin
-            if(A < B) B <= B - A;
-            if(A > B) A <= A - B;
-        end
-        
-endmodule
+endmodule: gcd
 
