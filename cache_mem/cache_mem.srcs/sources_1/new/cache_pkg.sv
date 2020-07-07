@@ -60,7 +60,7 @@ package cache_pkg;
     typedef struct {
         logic [31:0] data;      // 32-bit data
         logic        ready;     // result is ready
-    } CPUResult;
+    } CPUResponse;
      
      
      ///////////////////////////////////////////////////////
