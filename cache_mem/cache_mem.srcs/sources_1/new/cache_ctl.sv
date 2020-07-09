@@ -53,7 +53,7 @@ module cache_ctl(
     assign cpuResp = vCPUResp;
     
     always_comb begin
-        //--------------Initial all signals to default values-------------
+        //--------------Initialize all signals to default values-------------
         
         // No state change
         nxtState = curState;
@@ -126,7 +126,7 @@ module cache_ctl(
                     tagWrite.valid = '1;
                     
                     // new tag
-                    tagWrite.tag = cpuReq.addr[TAG_MSB: TAG_LSB];
+                    tagWrite.tag = cpuReq.addr[TAG_MSB:TAG_LSB];
                     
                     // cache line is dirty of write
                     tagWrite.dirty = cpuReq.rw;
