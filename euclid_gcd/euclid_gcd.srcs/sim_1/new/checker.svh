@@ -8,7 +8,9 @@ class Checker;
     endfunction: new
     
     task execute();
-    
-    endtask;
+        byte expected_result = 8'h0A;
+        if(expected_result !== bfm.result)
+            $error("Expected %h, Got %h", expected_result, bfm.result);
+    endtask: execute;
     
 endclass: Checker
