@@ -23,5 +23,29 @@ interface EuclidGCD_BFM;
     logic clk, rst;
     logic [7:0] a, b, result;
     
+    initial begin
+        clk = 0;
+        forever #5ns clk = ~clk;
+    end
     
+    ////////////////////////
+    //
+    ////////////////////////
+    task reset();
+        @ (posedge clk)
+        rst = 1'b1;
+    endtask: reset
+    
+    ///////////////////////////////////////
+    //
+    ///////////////////////////////////////
+    task stimulate(input byte ia, ib, output byte gcd_result);
+        @ (posedge clk)
+        a = ia;
+        b = ib;
+        
+        @ (posedge clk)
+        result = gcd_result;
+        
+    endtask: stimulate
 endinterface: EuclidGCD_BFM
