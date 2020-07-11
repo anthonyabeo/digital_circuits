@@ -1,7 +1,7 @@
 
-//`include "stimulus.svh"
-//`include "checker.svh"
-//`include "coverage.svh"
+`include "stimulus.svh"
+`include "checker.svh"
+`include "coverage.svh"
 
 
 class Testbench;
