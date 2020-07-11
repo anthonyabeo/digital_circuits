@@ -21,10 +21,11 @@
 
 //`include "testbench.svh"
 
+`include "testbench.svh"
+
 
 module top;
     timeunit 1ns / 1ps;
-    
     
     gcd DUT(.clk(bfm.clk), .rst(bfm.rst), .a(bfm.a), .b(bfm.b), .result(bfm.result));
     
